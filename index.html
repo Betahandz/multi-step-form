@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- the link to the styling -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- the functionality -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- the whole containment -->
+  <div class="whole_container">
+    <!-- the sidebar start -->
+    <aside class="sidebar">
+
+      <!-- the holder of the image -->
+      <div class="pmg_con">
+        <img src="assets/images/bg-sidebar-desktop.svg" class="pmg" alt="desktop">
+      </div>
+      
+      <div class="steppings">
+        <!-- single step -->
+        <div class="step">
+  
+          <!-- process one button -->
+          <button class="process page">1</button>
+          
+          <div class="series">
+            <p class="step_phrase">Step 1</p>
+            <h4 class="step_title">Your info</h4>
+          </div>
+        </div>
+        <!-- end of single step -->
+  
+        <!-- single step -->
+        <div class="step">
+  
+          <!-- process one button -->
+          <button class="process">2</button>
+          
+          <div class="series">
+            <p class="step_phrase">Step 2</p>
+            <h4 class="step_title">Select plan</h4>
+          </div>
+        </div>
+        <!-- end of single step -->
+  
+        <!-- single step -->
+        <div class="step">
+  
+          <!-- process one button -->
+          <button class="process">3</button>
+          
+          <div class="series">
+            <p class="step_phrase">Step 3</p>
+            <h4 class="step_title">Add-ons</h4>
+          </div>
+        </div>
+        <!-- end of single step -->
+  
+        <!-- single step -->
+        <div class="step">
+  
+          <!-- process one button -->
+          <button class="process">4</button>
+          
+          <div class="series">
+            <p class="step_phrase">Step 4</p>
+            <h4 class="step_title">Summary</h4>
+          </div>
+        </div>
+        <!-- end of single step -->
+      </div>
+
+    </aside>
+    <!-- end of the sidebar -->
+
+    <!-- we will display somethings here -->
+    <main class="display">
+      
+      <!-- the title -->
+      <h1 class="title">
+        Personal info
+      </h1>
+
+      <!-- the emphasis -->
+      <p class="info">
+        Please provide your name, email address, and phone number.
+      </p>
+      
+      <!-- personal data and information -->
+      <form action="" method="" class="personalData form">
+        <!-- the input section -->
+        <section class="personal_info">
+
+          <!-- single input -->
+          <div class="input">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="e.g: Josemaria Ofurum">
+            <p class="err_msg"></p>
+          </div>
+          <!-- end of single input -->
+
+          <!-- single input -->
+          <div class="input">
+            <label for="email">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="youremail@address.com">
+            <p class="err_msg"></p>
+          </div>
+          <!-- end of single input -->
+
+          <!-- single input -->
+          <div class="input">
+            <label for="tel">Phone Number</label>
+            <input type="number" name="tel" id="tel" inputmode="numeric" placeholder="e.g: 080783">
+            <p class="err_msg"></p>
+          </div>
+          <!-- end of single input -->
+        </section>
+        <!-- end of the input section -->
+        <!-- the submit button section -->
+        <div class="formsubmit">
+          <button class="form1" type="submit">
+            Next Step
+          </button>
+        </div>
+      </form>
+
+      <!-- plan selection -->
+      <form action="" method="" class="planSelect form hide">
+        <!-- Plans or Packages -->
+        <section class="packages">
+          <!-- plan or package types -->
+          <div class="plans">
+            <!-- the arcade plan -->
+            <article class="plan active">
+              <img src="assets/images/icon-arcade.svg" alt="arcade">
+
+              <div class="planinfo">
+                <p class="plantype">Arcade</p>
+                <p class="price">$<span class="cost">9</span>/<span class="annual_month">mo</span></p>
+                <p class="bonus">2 months free</p>
+              </div>
+            </article>
+
+            <!-- the advanced package -->
+            <article class="plan">
+              <img src="assets/images/icon-advanced.svg" alt="arcade">
+
+              <div class="planinfo">
+                <p class="plantype">Advanced</p>
+                <p class="price">$<span class="cost">12</span>/<span class="annual_month">mo</span></p>
+                <p class="bonus">2 months free</p>
+              </div>
+            </article>
+
+
+            <!-- the pro package; -->
+            <article class="plan">
+              <img src="assets/images/icon-pro.svg" alt="arcade">
+
+              <div class="planinfo">
+                <p class="plantype">Pro</p>
+                <p class="price">$<span class="cost">15</span>/<span class="annual_month">mo</span></p>
+                <p class="bonus">2 months free</p>
+              </div>
+            </article>
+          </div>
+
+          <!-- plan or package duration -->
+          <div class="duration_type">
+            <p class="monthly bold">Monthly</p>
+
+            <label for="checkbox" class="switch">
+              <input type="checkbox" name="switch" id="checkbox">
+              <span class="check"></span>
+            </label>
+
+            <p class="yearly">Yearly</p>
+          </div>
+        </section>
+        <!-- end of Plans or Packages -->
+        <!-- the submit button section -->
+        <div class="formsubmit">
+          <button class="return" type="button" data-id="form2">
+            Go Back
+          </button>
+          <button class="form2" type="submit">
+            Next Step
+          </button>
+        </div>
+      </form>
+
+      <!-- the add-ons -->
+      <form action="" method="" class="addOn form hide">
+        <!-- the addons section -->
+        <section class="addons">
+          
+          <!-- single addon -->
+          <div class="addon">
+            <div class="checkinp">
+              <input type="checkbox" name="service" id="services">
+            </div>
+            <div class="addondetail">
+              <p class="addon_type bold">Online Services</p>
+              <p class="addon_info">Access to multiplayer games</p>
+            </div>
+            <div class="addoncost">
+              <p class="addcost bold">+$<span class="adc">1</span>/<span class="addu">mo</span></p>
+            </div>
+          </div>
+          <!-- end of single addon -->
+
+          <!-- single addon -->
+          <div class="addon">
+            <div class="checkinp">
+              <input type="checkbox" name="storage" id="services">
+            </div>
+            <div class="addondetail">
+              <p class="addon_type bold">Larger Storage</p>
+              <p class="addon_info">Extra 1TB of cloud save</p>
+            </div>
+            <div class="addoncost">
+              <p class="addcost bold">+$<span class="adc">2</span>/<span class="addu">mo</span></p>
+            </div>
+          </div>
+          <!-- end of single addon -->
+
+          
+          <!-- single addon -->
+          <div class="addon">
+            <div class="checkinp">
+              <input type="checkbox" name="service" id="services">
+            </div>
+            <div class="addondetail">
+              <p class="addon_type bold">Customizable Profiles</p>
+              <p class="addon_info">Custom themes on your profile</p>
+            </div>
+            <div class="addoncost">
+              <p class="addcost bold">+$<span class="adc">2</span>/<span class="addu">mo</span></p>
+            </div>
+          </div>
+          <!-- end of single addon -->
+        </section>
+        <!-- end of the addons section -->
+        <!-- the submit button section -->
+        <div class="formsubmit">
+          <button class="return" type="button" data-id="form3">
+            Go Back
+          </button>
+          <button class="form3" type="submit">
+            Next Step
+          </button>
+        </div>
+      </form>
+
+      <!-- the completion -->
+      <form action="" method="" class="completion form hide">
+        <!-- the croschecking section -->
+        <section class="crosscheck">
+          <div class="crossview">
+            <article class="cross_plan">
+              <div class="cross_type">
+                <p class="planname"><span class="pllan">Arcade</span>(<span class="y_m">Monthly</span>)</p>
+                <a href="#" class="plan_select_page">change</a>
+              </div>
+              <div class="cross_cost">
+                <p class="c_cost">$<span class="crossPrice sum">9</span>/<span class="crossDuration">mo</span></p>
+              </div>
+            </article>
+            
+            <div class="servicesHolder">
+              
+            </div>
+          </div>
+
+          <!-- to show the total of every thing we have got -->
+          <article class="total">
+            <p class="tot_title">Total(per <span class="timer">month</span>)</p>
+            <h4 class="amt_total">+$<span class="amt">12</span>/<span class="amt_dura">mo</span></h4>
+          </article>
+        </section>
+        <!-- end of the crosschecking section -->
+        <!-- the submit button section -->
+        <div class="formsubmit">
+          <button class="return" type="button" data-id="form4">
+            Go Back
+          </button>
+          <button class="form4" type="submit">
+            Confirm
+          </button>
+        </div>
+      </form>
+      
+      <div class="voteOfThanks hide">
+        <div class="wrap">
+          <img src="assets/images/icon-thank-you.svg" loading="lazy" class="voteImage" alt="thanks">
+          <h2 class="voteTitle">Thank you!</h2>
+          <p class="voteText">
+            Thanks for confirming your subscription! We hope you have 
+            fun using our platform. If you ever need support, please feel
+            free to email us at support@loremgaming.com
+          </p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <!-- end of the whole containment -->
+
+ </body>
+</html>

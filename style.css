@@ -1,0 +1,482 @@
+@font-face {
+    font-family: ubB;
+    src: url(assets/ubuntu/Ubuntu-Bold.ttf);
+}
+@font-face {
+    font-family: ubM;
+    src: url(assets/ubuntu/Ubuntu-Medium.ttf);
+}
+@font-face {
+    font-family: ubR;
+    src: url(assets/ubuntu/Ubuntu-Regular.ttf);
+}
+:root {
+    /* typography */
+    --ubb: ubB;
+    --ubm: ubM;
+    --ubr: ubR;
+
+    /* primary_color */
+    --Marine-blue: hsl(213, 96%, 18%);
+    --Purplish-blue: hsl(243, 100%, 62%);
+    --Pastel-blue: hsl(228, 100%, 84%);
+    --Light-blue: hsl(206, 94%, 87%);
+    --Strawberry-red: hsl(354, 84%, 57%);
+
+    /* secondary_color */
+    --Cool-gray: hsl(231, 11%, 63%);
+    --Light-gray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+    font-family: var(--ubr);
+    scroll-behavior: smooth;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: var(--Light-blue);
+}
+/* the whole container */
+.whole_container {
+    background-color: var(--White);
+    width: 90%;
+    max-width: 800px;
+    min-height: 530px;
+    display: flex;
+    align-items: stretch;
+    padding: 15px;
+    border-radius: 15px;
+}
+.sidebar{
+ width: 30%;   
+ height: 500px;
+ position: relative;
+}
+
+.pmg_con, .steppings{
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.pmg{
+    min-width: 100%;
+    height: inherit;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.steppings{
+    padding: 30px;
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: flex-start;
+}
+
+.step{
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: nowrap row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.process{
+    background-color: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid var(--Pastel-blue);
+    background-color: transparent;
+    color: var(--White);
+    font-family: var(--ubb);
+}
+
+.series{
+    margin-left: 15px;
+}
+
+.step_phrase{
+    font-family: var(--ubr);
+    color: var(--Cool-gray);
+}
+
+.step_title{
+    color: var(--Magnolia);
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+
+/* the main starts to style here */
+.display{
+    width: 70%;
+    padding: 30px 60px;
+    min-height: 500px;
+}
+.title{
+    font-family: var(--ubb);
+    color: var(--Marine-blue);
+}
+.info{
+    color: var(--Cool-gray);
+    font-size: 15px;
+    margin: 5px 0 10px 0;
+}
+form{
+    min-height: 370px;
+    padding-top: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.showcase, .packages, .addons, .crosscheck{
+    min-height: 250px;
+    /* overflow: hidden; */
+}
+.personal_info{
+    height: inherit;
+}
+.input{
+    padding-bottom: 30px;
+    position: relative;
+}
+label{
+    font-family: var(--ubb);
+    color: var(--Marine-blue);
+    font-size: 11px;
+    margin-bottom: 5px;
+    display: block;
+}
+.input input{
+    display: block;
+    width: 100%;
+    height: 35px;
+    font-family: var(--ubb);
+    color: var(--Marine-blue);
+    padding-left: 15px;
+    border: solid .52px var(--Light-gray);
+    border-radius: 5px;
+    outline: none;
+    font-weight: 500;
+}
+.input input:focus{
+    border-color: var(--Purplish-blue);
+}
+.err_msg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-family: var(--ubm);
+    color: var(--Strawberry-red);
+    font-size: 11px;
+}
+/******************** THE PACKAGES ************/
+.packages{
+    /* background-color: yellow; */
+}
+.plans{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.plan{
+    width: 30%;
+    height: 150px;
+    background-color: white;
+    border: solid .8px var(--Light-gray);
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.plan:hover{
+    border-color: var(--Purplish-blue);
+}
+.plan img{
+    width: 30px;
+}
+.planinfo{
+    font-size: 11px;
+}
+.plantype{
+    font-family: var(--ubm);
+    color: var(--Marine-blue);
+    font-size: 14px;
+    
+}
+.price{
+    color: var(--Cool-gray);
+    margin: 5px 0;
+    font-weight: 500;
+    transition: .8s;
+}
+.bonus{
+    font-weight: 600;
+    color: var(--Purplish-blue);
+    height: 0;
+    overflow: hidden;
+    transition: .8s;
+}
+.showbonus {
+    height: auto;
+}
+/*********** duration type *************/
+.duration_type{
+    background-color: var(--Magnolia);
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    border-radius: 4px;
+    font-size: 13px;
+    border-radius: 5px;
+}
+.monthly, .yearly{
+    color: var(--Marine-blue);
+}
+/*SWITCH*/
+.switch input[type = checkbox] {
+    visibility: hidden;
+}
+.check {
+    width: 40px;
+    height: 19px;
+    background-color: var(--Marine-blue);
+    display: block;
+    margin: 0 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+.check::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: var(--Alabaster);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    margin: 0 3px;
+    transition: .5s;
+}
+
+.switch input:checked ~ .check::after {
+    margin-left: 22px;
+}
+/* ADDONS FOR THE PROJECT */
+/* .addons{
+    background-color: floralwhite;
+} */
+.addon{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    border: solid .8px var(--Cool-gray);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.addondetail{
+    margin-left: 25px;
+    font-size: 12px;
+}
+.addon_type{
+    font-family: var(--ubm);
+    color: var(--Marine-blue);
+    font-size: 13px;
+}
+.addon_info{
+    color: var(--Cool-gray);
+    margin-top: 5px;
+}
+.addoncost{
+    margin-left: auto;
+    color: var(--Purplish-blue);
+    font-size: 13px;
+}
+.addcost{
+    font-family: var(--ubm);
+}
+
+
+/* CROSSCHECK SECTION STYLING STARTS HERE */
+.crosscheck{
+    border-radius: 20px;
+    padding: 20px;
+}
+.crossview{
+    background-color: var(--Magnolia);
+    padding: 15px 10px;
+    border-radius: 10px;
+}
+.cross_plan{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    border-bottom: solid 2px var(--Light-gray);
+}
+.planname, .c_cost{
+    color: var(--Marine-blue);
+    font-weight: bolder;
+}
+.plan_select_page{
+    color: var(--Marine-blue);
+    margin-top: 5px;
+    display: block;
+}
+.addy{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    color: var(--Cool-gray);
+}
+.amount{
+    font-size: 12px;
+    color: var(--Marine-blue);
+}
+/* total */
+.total{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+/* the button for the submission of the form */
+.formsubmit{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width:  100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.formsubmit button[type = submit] {
+    background-color: var(--Marine-blue);
+    padding: 10px;
+    font-family: var(--ubm);
+    color: var(--Alabaster);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .5s;
+}
+.formsubmit button[type = submit]:hover {
+    background-color: var(--Pastel-blue);
+}
+.formsubmit button[type = button] {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: var(--ubm);
+    cursor: pointer;
+    color: var(--Cool-gray);
+    padding: 10px;
+    font-size: 17px;
+}
+.formsubmit button[type = button]:hover {
+    color: var(--Marine-blue);
+}
+.formsubmit button.form1 {
+    margin-left: auto;
+}
+.formsubmit button.form4 {
+    background-color: var(--Purplish-blue);
+}
+/* the class to be invincible */
+.disappear{
+    visibility: hidden;
+}
+/* the class to move my knob */
+.knobmv {
+    transform: translateX(17px);
+}
+/* the classt to make bold */
+.bold{
+    font-weight: 800;
+}
+/* to open or show the bonuses */
+.bon{
+    height: auto;
+    overflow: unset;
+}
+/* class to hide an element and its children */
+.hide{
+    display: none;
+}
+/* the class for an active package */
+.active {
+    background-color: var(--Magnolia);
+    border-color: var(--Marine-blue);
+}
+/* the active button class for the side bar */
+.page{
+    color: var(--Marine-blue);
+    background-color: var(--Pastel-blue);
+}
+.danger {
+    color: var(--Strawberry-red);
+}
+.safezone {
+    color: lightgreen;
+}
+/* Wrap it all up */
+.voteOfThanks {
+    height: 100%;
+}
+.wrap {
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.voteImage {
+    margin-bottom: 20px;
+    filter: drop-shadow(-1px -1px 0 var(--Cool-gray))
+    drop-shadow(5px 5px 2px var(--Marine-blue));
+}
+.voteTitle {
+    font-family: var(--ubb);
+    color: var(--Marine-blue);
+}
+.voteText {
+    color: var(--Cool-gray);
+    font-family: var(--ubr);
+    text-align: center;
+    margin: 20px auto;
+    width: calc(100% - 10px);
+    font-size: 15px;
+
+}
