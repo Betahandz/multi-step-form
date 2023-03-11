@@ -47,46 +47,40 @@ body {
     place-items: center;
     background-color: var(--Light-blue);
 }
+
 /* the whole container */
 .whole_container {
     background-color: var(--White);
     width: 90%;
     max-width: 800px;
-    min-height: 530px;
+    min-height: 500px;
     display: flex;
     align-items: stretch;
     padding: 15px;
     border-radius: 15px;
 }
+
+
 .sidebar{
  width: 30%;   
- height: 500px;
+ min-height: 200px;
  position: relative;
+ background-image: url(assets/images/bg-sidebar-desktop.svg);
 }
 
-.pmg_con, .steppings{
+
+.steppings{
     width: 100%;
-    height: inherit;
+    min-height: 100%;
     position: absolute;
     overflow: hidden;
     border-radius: 20px;
-}
-
-.pmg{
-    min-width: 100%;
-    height: inherit;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.steppings{
     padding: 30px;
     display: flex;
     flex-flow: nowrap column;
     justify-content: flex-start;
 }
+
 
 .step{
     margin-bottom: 20px;
@@ -110,11 +104,46 @@ body {
 .series{
     margin-left: 15px;
 }
-
+/******************************************/
+@media (max-width: 768px) {
+    body {
+        display: block;
+    }
+    .whole_container {
+        background-color: var(--Light-blue);
+        margin: auto;
+        height: 100%;
+        display: block;
+        padding: 0;
+        border-radius: 0;
+        width: 100%;
+        position: relative;
+        z-index: -2;
+    }
+    .sidebar {
+        width: 100%;
+        z-index: -1;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(assets/images/bg-sidebar-mobile.svg);
+    }
+    .steppings {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: row;
+        gap: 5vw;
+    }
+    .series {
+        display: none;
+    }
+}
 .step_phrase{
     font-family: var(--ubr);
     color: var(--Cool-gray);
 }
+
 
 .step_title{
     color: var(--Magnolia);
@@ -128,8 +157,9 @@ body {
 .display{
     width: 70%;
     padding: 30px 60px;
-    min-height: 500px;
+    height: 200px;
 }
+
 .title{
     font-family: var(--ubb);
     color: var(--Marine-blue);
@@ -139,11 +169,32 @@ body {
     font-size: 15px;
     margin: 5px 0 10px 0;
 }
+/***************************************************/
+
 form{
     min-height: 370px;
     padding-top: 20px;
     position: relative;
     margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+    .display {
+        background-color: rgb(255, 255, 255);
+        width: 90%;
+        min-height: 55%;
+        padding: 20px;
+        margin: -80px auto;
+        border-radius: 10px;
+    }
+    .title {
+        font-size: 7vw;
+    }
+    .info {
+        width: 80%;
+    }
+    form {
+        position: initial;
+    }
 }
 .showcase, .packages, .addons, .crosscheck{
     min-height: 250px;
@@ -379,6 +430,14 @@ label{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+@media (max-width: 768px) {
+    .formsubmit {
+        background-color: rgb(255, 255, 255);
+        bottom: 0;
+        padding: 10px 5px;
+        left: 0;
+    }
 }
 .formsubmit button[type = submit] {
     background-color: var(--Marine-blue);
