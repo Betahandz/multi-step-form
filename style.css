@@ -118,7 +118,7 @@ body {
         border-radius: 0;
         width: 100%;
         position: relative;
-        z-index: -2;
+        z-index: 0;
     }
     .sidebar {
         width: 100%;
@@ -437,6 +437,7 @@ label{
         bottom: 0;
         padding: 10px 5px;
         left: 0;
+        z-index: 2;
     }
 }
 .formsubmit button[type = submit] {
